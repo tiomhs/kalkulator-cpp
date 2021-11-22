@@ -1,0 +1,104 @@
+#include <iostream>
+
+using namespace std;
+
+void waktu(){
+    int a,hm,hs,mh,ms,sm,sh,in;
+
+    cout << "\n=====Program Menghitung Waktu=====" << endl;
+    cout << "1. Jam" << endl;
+    cout << "2. Menit" << endl;
+    cout << "3. Detik" << endl;
+
+    cout << "Masukan pilihan anda : ";
+    cin >> a;
+
+    cout << "masukan waktu : ";
+    cin >> in;
+
+    // code
+        hm = in * 60;
+        hs = in * 3600;
+        mh = in / 60;
+        ms = in * 60;
+        sh = in / 3600;
+        sm = in / 60;
+    // akhir
+
+    switch (a){
+        case (1):
+            cout << in << " Jam = " << hm <<" Menit" << endl;
+            cout << in << " Jam = " << hs << " Detik" << endl;
+            break;
+        case (2):
+            cout << in << " Menit = " << mh << " Jam" << endl;
+            cout << in << " Menit = " << ms << " Detik" << endl;
+            break;
+        case(3):
+            cout << in << " Detik = " << sh << " Jam" << endl;
+            cout << in << " Detik = " << sm << " Menit" << endl;
+            break;
+        default:
+            cout << "Oh.... come on" << endl;
+            break;
+    }
+}
+
+void panjang(){
+    int a,km,cm,m,in;
+
+    cout << "\n===Program Menghitung Jarak===" << endl;
+    cout << "1. Kilometer" << endl;
+    cout << "2. Meter"<< endl;
+    cout << "3. Centimeter"<<endl;
+
+    cout << "Pilih : ";
+    cin >> a;
+    cout << "Masukkan : ";
+    cin >> in;
+
+    switch (a){
+        case (1):
+            cout << in << " Kilometer = " << in * 1000 << " Meter\n";
+            cout << in << " Kilometer = " << in * 100000 << " Centimeter\n";
+            break;
+        case (2):
+            cout << in << " Meter = " << in / 1000 << " Kilometer\n";
+            cout << in << " Meter = " << in * 100 << " Centimeter\n";
+            break;
+        case (3):
+            cout << in << " Centimeter = " << in / 100000 << " Kilometer\n";
+            cout << in << " Centimeter = " << in * 100000 << " Meter\n";
+            break;
+        
+        default:
+            break;
+    }
+}
+
+int main(){
+
+    int in;
+
+    cout << "===Selamat Datang===" << endl;
+    cout << "Silahkan Pilih Program" << endl;
+    cout << "1. Menghitung Waktu" << endl;
+    cout << "2. Menghitung Panjang" << endl;
+
+    cout << "Masukan pilihan anda : ";
+    cin >> in;
+    
+    switch (in)
+    {
+    case 1:
+        waktu();
+        break;
+    case 2:
+        panjang();
+        break;
+    default:
+        cout << "oioioioioi" << endl;
+        break;
+    }
+    return 0;
+}
