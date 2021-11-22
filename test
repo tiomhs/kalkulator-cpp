@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// waktu
 void waktu(){
     int a,hm,hs,mh,ms,sm,sh,in;
 
